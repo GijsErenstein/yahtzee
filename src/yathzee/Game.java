@@ -57,15 +57,14 @@ public class Game {
 		ArrayList<ScoreInterface> possibleScores = this.scoreCard.findPossibleScores(this.diceSet.getValues());
 		
 		for (ScoreInterface score : possibleScores) { 
-			this.ui.showMessage(score.getName() + ":");
-			this.ui.showMessage(score.getValue() + "");
+			this.ui.showMessage(score.getName() + ": " + score.getValue());
 		}
 		
 		// ask user to select one score
 		
 		// fill in score in scoreCard
 		
-		this.ui.showMessage("Whoops no scorecard yet");
+		this.ui.showMessage("Whoops no way to store your score yet");
 	}
 	
 	private void releaseAllDices() {
