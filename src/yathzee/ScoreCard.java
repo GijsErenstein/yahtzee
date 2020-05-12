@@ -255,4 +255,14 @@ public class ScoreCard implements ScoreCardInterface {
 		return longestSequence;
 	}
 
+	public String reportStatus()
+	{
+		String status = "ScoreCard status: \n";
+
+		status += "Hoi!";
+
+		return status;
+
+	}
+
 }

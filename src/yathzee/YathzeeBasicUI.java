@@ -6,9 +6,9 @@ public class YathzeeBasicUI implements YathzeeUIInterface{
 
 	@Override
 	public int promptDiceNumber(String prompt) {
-		int result = 0;
+		int result;
 		try {
-			result = Integer.parseInt(input(prompt).trim());
+			result = Integer.parseInt(this.input(prompt).trim());
 		} catch (Exception e) {
 			result = 0;
 		}
@@ -67,7 +67,6 @@ public class YathzeeBasicUI implements YathzeeUIInterface{
 
 	@Override
 	public void showMessage(String message) {
-		
 		System.out.println(message);
 	}
 	

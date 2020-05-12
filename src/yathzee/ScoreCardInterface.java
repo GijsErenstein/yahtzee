@@ -15,4 +15,7 @@ public interface ScoreCardInterface {
 	 * @return returns true if is was stored successfully
 	 */
 	public boolean storeScore(ScoreInterface score);
+
+	public String reportStatus();
+
 }

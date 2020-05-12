@@ -73,16 +73,31 @@ public class Game {
 
 	private void holdDices() {
 		int number = this.ui.promptDiceNumber("What number do you want to hold(leave empty for none)?");
+		this.holdDice(number);
+	}
+
+	
+	private void releaseDices() {
+		int number = this.ui.promptDiceNumber("What number do you want to Release(leave empty for none)?");
+		this.releaseDice(number);
+	}
+
+	public void holdDice(Integer number)
+	{
 		if (this.diceSet.holdNumber(number)) {
 			this.ui.showDices(this.diceSet.getValues(), this.diceSet.getHeldValues());
 		}
 	}
-	
-	private void releaseDices() {
-		int number = this.ui.promptDiceNumber("What number do you want to Release(leave empty for none)?");
+
+	public void releaseDice(Integer number)
+	{
 		if (this.diceSet.releaseNumber(number)) {
 			this.ui.showDices(this.diceSet.getValues(), this.diceSet.getHeldValues());
 		}
 	}
-	
+
+	public void showScoreCardStatus()
+	{
+		this.ui.showMessage(this.scoreCard.reportStatus());
+	}
 }
